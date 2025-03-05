@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Tugas_1 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
-        int pilihan;
+        Scanner input = new Scanner (System.in);
+        String menuPilihan;
 
         // Data valid untuk login Admin
         final String NIM_TERAKHIR = "381";
@@ -14,35 +14,37 @@ public class Tugas_1 {
         final String MAHASISWA_NAMA = "Nur Aini";
         final String MAHASISWA_NIM = "202410370110381";
 
+        // Menampilkan menu login
         System.out.println("Pilih login: ");
         System.out.println("1. Admin ");
         System.out.println("2. Mahasiswa ");
         System.out.print("Masukkan Pilihan: ");
 
-        pilihan = scanner.nextInt();
-        scanner.nextLine();
+        menuPilihan = input.nextLine();
 
-        if (pilihan == 1) {
+         // proses login Admin
+          if (menuPilihan.equals("1")) {
 
             System.out.print("Masukkan username: ");
-            String username = scanner.nextLine();
+            String username = input.nextLine();
 
             System.out.print("Masukkan password: ");
-            String password = scanner.nextLine();
+            String password = input.nextLine();
 
             if (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD)) {
                 System.out.println("Login Admin berhasil!");
             } else {
                 System.out.println("Login gagal! Username atau password salah.");
             }
-
-        } else if (pilihan == 2) {
+            
+            // proses login Mahasiswa
+        } else if (menuPilihan.equals("2")) {
 
             System.out.print("Masukkan Nama: ");
-            String nama = scanner.nextLine();
+            String nama = input.nextLine();
 
             System.out.print("Masukkan NIM: ");
-            String nim = scanner.nextLine();
+            String nim = input.nextLine();
 
             if (nama.equalsIgnoreCase(MAHASISWA_NAMA)&& nim.equals(MAHASISWA_NIM)) {
                 System.out.println("Login Mahasiswa berhasil!");
@@ -50,10 +52,12 @@ public class Tugas_1 {
                 System.out.println("Login gagal! Nama atau NIM salah.");
             }
 
+            // Menangani input yang tidak valid 
         } else {
             System.out.println("Pilihan Tidak Valid");
         }
 
-        scanner.close();
+        // menutup Scanner
+        input.close();
     }
 }
