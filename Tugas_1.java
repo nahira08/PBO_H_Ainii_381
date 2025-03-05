@@ -46,7 +46,7 @@ public class Tugas_1 {
             System.out.print("Masukkan NIM: ");
             String nim = input.nextLine();
 
-            if (nama.equalsIgnoreCase(MAHASISWA_NAMA)&& nim.equals(MAHASISWA_NIM)) {
+            if (nama.equals(MAHASISWA_NAMA)&& nim.equals(MAHASISWA_NIM)) {
                 System.out.println("Login Mahasiswa berhasil!");
             } else {
                 System.out.println("Login gagal! Nama atau NIM salah.");
