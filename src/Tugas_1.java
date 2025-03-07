@@ -57,7 +57,7 @@ public class Tugas_1 {
             System.out.println("Pilihan Tidak Valid");
         }
 
-        // menutup Scanner
+        
         input.close();
     }
 }
