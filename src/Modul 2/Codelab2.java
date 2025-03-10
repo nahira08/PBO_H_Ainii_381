@@ -23,15 +23,18 @@ class RekeningBank {
 
     void setorUang(double jumlah) {
         saldo += jumlah;
-        System.out.println(namaPemilik + " menyetor Rp" + formatter.format(jumlah) + ". Saldo sekarang: Rp" + formatter.format(saldo));
+        System.out.println(namaPemilik + " menyetor Rp" + formatter.format(jumlah) + 
+                            ". Saldo sekarang: Rp" + formatter.format(saldo));
     }
 
     void tarikUang(double jumlah) {
         if (jumlah > saldo) {
-            System.out.println(namaPemilik + " menarik Rp" + formatter.format(jumlah) + ". (Gagal, saldo tidak mencukupi) Saldo saat ini: Rp" + formatter.format(saldo));
+            System.out.println(namaPemilik + " menarik Rp" + formatter.format(jumlah) + 
+                                ". (Gagal, saldo tidak mencukupi) Saldo saat ini: Rp" + formatter.format(saldo));
         } else {
             saldo -= jumlah;
-            System.out.println(namaPemilik + " menarik Rp" + formatter.format(jumlah) + "(Berhasil) Saldo sekarang: Rp" + formatter.format(saldo));
+            System.out.println(namaPemilik + " menarik Rp" + formatter.format(jumlah) + 
+                                "(Berhasil) Saldo sekarang: Rp" + formatter.format(saldo));
         }
     }
 }
@@ -47,6 +50,8 @@ public class Codelab2 {
         rekening1.setorUang(5000000);
         rekening2.setorUang(10000000);
 
+        System.out.println();
+        
         rekening1.tarikUang(35000000);
         rekening2.tarikUang(20000000);
 
