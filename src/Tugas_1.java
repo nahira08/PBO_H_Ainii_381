@@ -1,18 +1,41 @@
 import java.util.Scanner;
 
+class Admin {
+    final String username = "Admin381";
+    final String password = "Password381";
+
+    void login(String getUsername, String getPassword) {
+        if (getUsername.equals(username) && getPassword.equals(password)) {
+            System.out.println("Login Admin berhasil!");
+        } else {
+            System.out.println("Login gagal! Username atau password salah.");
+        }
+    }
+}
+
+class Mahasiswa {
+    final String username = "Nur Aini";
+    final String password = "202410370110381";
+
+    void displayInfo() {
+        System.out.println("\nNama: " + username);
+        System.out.println("Password: " + password);
+    }
+
+    void login(String getUsername, String getPassword) {
+        if (getUsername.equals(username) && getPassword.equals(password)) {
+            displayInfo();
+            System.out.println("Login Mahasiswa berhasil!");
+        } else {
+            System.out.println("Login gagal! Nama atau NIM salah.");
+        }
+    }
+}
+
 public class Tugas_1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
+        Scanner input = new Scanner(System.in);
         String menuPilihan;
-
-        // Data valid untuk login Admin
-        final String NIM_TERAKHIR = "381";
-        final String ADMIN_USERNAME = "Admin" + NIM_TERAKHIR;
-        final String ADMIN_PASSWORD = "Password" + NIM_TERAKHIR;
-
-        // Data valid untuk login Mahasiswa
-        final String MAHASISWA_NAMA = "Nur Aini";
-        final String MAHASISWA_NIM = "202410370110381";
 
         // Menampilkan menu login
         System.out.println("Pilih login: ");
@@ -22,23 +45,21 @@ public class Tugas_1 {
 
         menuPilihan = input.nextLine();
 
-         // proses login Admin
-          if (menuPilihan.equals("1")) {
-
+        // proses login Admin
+        if (menuPilihan.equals("1")) {
+            Admin admin = new Admin(); // Buat objek Admin
+            
             System.out.print("Masukkan username: ");
             String username = input.nextLine();
 
             System.out.print("Masukkan password: ");
             String password = input.nextLine();
 
-            if (username.equals(ADMIN_USERNAME) && password.equals(ADMIN_PASSWORD)) {
-                System.out.println("Login Admin berhasil!");
-            } else {
-                System.out.println("Login gagal! Username atau password salah.");
-            }
+            // Panggil method login yang sekarang bertipe void
+            admin.login(username, password);
             
-            // proses login Mahasiswa
         } else if (menuPilihan.equals("2")) {
+            Mahasiswa mahasiswa = new Mahasiswa(); // Buat objek Mahasiswa
 
             System.out.print("Masukkan Nama: ");
             String nama = input.nextLine();
@@ -46,18 +67,13 @@ public class Tugas_1 {
             System.out.print("Masukkan NIM: ");
             String nim = input.nextLine();
 
-            if (nama.equals(MAHASISWA_NAMA)&& nim.equals(MAHASISWA_NIM)) {
-                System.out.println("Login Mahasiswa berhasil!");
-            } else {
-                System.out.println("Login gagal! Nama atau NIM salah.");
-            }
+            // Panggil method login yang sekarang bertipe void
+            mahasiswa.login(nama, nim);
 
-            // Menangani input yang tidak valid 
         } else {
             System.out.println("Pilihan Tidak Valid");
         }
 
-        
         input.close();
     }
 }
