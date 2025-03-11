@@ -11,7 +11,7 @@ class Admin {
             System.out.println("Login gagal! Username atau password salah.");
         }
     }
-}
+} 
 
 class Mahasiswa {
     final String username = "Nur Aini";
