@@ -1,6 +1,5 @@
 ---
 
-### 📝 Pertama Commit
 | Perintah | Deskripsi |
 |----------|-----------|
 | `git init` | Inisialisasi repository Git. |
