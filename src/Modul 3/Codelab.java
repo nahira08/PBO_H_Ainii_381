@@ -49,7 +49,7 @@ class Pahlawan extends KarakterGame {
 
         System.out.printf("Kesehatan %s sekarang %d\n\n", target.getNama(), target.getKesehatan());
         if (target.getKesehatan() == 0) {
-            System.out.printf("%s game over...\n\n", target.getNama());
+            System.out.printf("%s die...\n\n", target.getNama());
         }
     }
 }
