@@ -6,7 +6,7 @@ Repository ini berisi file yang digunakan dalam **Modul 1 Praktikum PBO**. Setia
 
 Semua file ini disimpan di dalam folder:
 ```
-Modul 1/Modul 1 - Summary/
+Modul 1/
 ```
 
 ## 📜 File dalam Repository
