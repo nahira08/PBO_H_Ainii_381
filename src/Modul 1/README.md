@@ -16,19 +16,19 @@ Modul1.pdf → Materi resmi dari Modul 1, berisi teori dan latihan dasar tentang
 
 ## 🚀 Tujuan Pembelajaran
 
-Memahami dasar-dasar struktur kode Java.
+Memahami dasar-dasar struktur kode Java>,<!~.
 
-Menggunakan Java API untuk bekerja dengan tanggal dan waktu.
+Menggunakan Java API untuk bekerja dengan tanggal dan waktu~.
 
-Mengimplementasikan konsep logika pemrograman dalam latihan tambahan.
+Mengimplementasikan konsep logika pemrograman dalam latihan tambahan^^!!.
 
-Mengelola kode menggunakan Git & GitHub.
+Mengelola kode menggunakan Git & GitHub~.
 
 ## 📌 Catatan
 
-Modul1Challenge.java bukan bagian dari tugas utama, melainkan dibuat untuk latihan tambahan.
+Modul1Challenge.java bukan bagian dari tugas utama, melainkan dibuat untuk latihan tambahan~.
 
-Jika ada kesalahan dalam kode atau ingin menambahkan fitur, silakan edit dan eksperimen sendiri.
+Jika ada kesalahan dalam kode atau ingin menambahkan fitur, silakan edit dan eksperimen sendiri yaa^^~.
 
 ## 🤝 Kontribusi
 
