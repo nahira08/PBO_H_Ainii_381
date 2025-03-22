@@ -77,7 +77,7 @@ GitHub itu tempat buat nyimpen proyek kamu secara online dan kerjasama bareng te
 - Huruf gede kecil di Java itu beneran diperhatiin poolll!!, gak bisa dianggap sepele 🥲 hiks...  
 - `Scanner` itu bukan alat scan barcode, tapi dia temenan sama keyboard~ 🎹  
 - `System.out.println("Hello, World!")` adalah sapaan paling legendaris di dunia pemrograman 👋  
-- Error itu bukan musuh... dia cuma cara Java bilang: “Hei, ada yang keliru nih kiw kiww~”
+- Error bukan musuh yaw~ cuman itu cara Java bilang kalo ada yang salah, kayak : “Hei, ada yang keliru nih kiw kiww~”
 
 ---
 
