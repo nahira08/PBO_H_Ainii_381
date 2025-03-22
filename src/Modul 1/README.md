@@ -18,17 +18,6 @@ Modul 1/
 | `Main.java`            | Program latihan (praktek) dari **Modul 1**, menggunakan **Java API (`java.util.Date`)** untuk menampilkan waktu saat ini. |
 | `Modul1Challenge.java` | **Latihan tambahan (Challenge^^)** setelah menyelesaikan CodeLab 1 dan Tugas 1, berisi kalkulator kebutuhan kalori harian. |
 
-## 🧠 Rangkuman Pemahaman
-
-Berdasarkan file dan latihan yang sudah dikerjakan di Modul 1, aku memahami hal-hal berikut ini:
-
-- Cara menuliskan struktur program Java dengan benar (pakai `class`, `main`, dan `Scanner`).
-- Bisa menggunakan **`Scanner`** untuk membaca input dari user.
-- Bisa memanfaatkan **`LocalDate`** untuk menghitung umur dan **`Date`** untuk menampilkan waktu.
-- Sudah paham logika dasar seperti **percabangan (`if`, `else`)**, **perulangan**, dan penggunaan **`switch-case`**.
-- Mulai terbiasa menggunakan **Git & GitHub** untuk commit, push, dan mengelola file.
-- Bisa bikin program sederhana sendiri dari ide (seperti kalkulator kalori) dan menguji logika yang aku pelajari ^^!
-
 ## 🚀 Tujuan Pembelajaran
 
 - Memahami dasar-dasar **struktur kode Java** >,<!~
