@@ -4,23 +4,24 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
-        // Buat objek tanaman
-        Plant Tomat = new Plant("Tomat", "Sayur");
-        Plant Mawar = new Plant("Mawar", "Bunga");
-        Plant Mangga = new Plant("Mangga", "Buah");
+        // Buat objek itemnyaa
+        Item semangka = new Item("Semangka", "Buah");
+        Item mawar = new Item("Mawar", "Bunga");
+        Item tuna = new Item("Tuna", "Daging Ikan");
 
-        // Buat petani dengan tanaman favorit
-        Farmer farmer1 = new Farmer("Siti", Tomat);
-        Farmer farmer2 = new Farmer("Budi", Mawar);
-        Farmer farmer3 = new Farmer("Joko", Mangga);
+        // Buat objek person dengan item favorit masing-masing
+        Person person1 = new Person("Radyaa", semangka);
+        Person person2 = new Person("Ainii", mawar);
+        Person person3 = new Person("Emengg", tuna);
 
-        // Output
+        // Output nyaa
         System.out.println("Hello world!");
         System.out.println("Current date and time: " + new Date());
 
-        farmer1.talk();
-        farmer2.talk();
-        farmer3.talk();
+        person1.talk();
+        person2.talk();
+        person3.talk();
     }
 }
+
 

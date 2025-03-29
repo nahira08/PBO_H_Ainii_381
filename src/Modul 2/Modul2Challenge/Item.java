@@ -1,11 +1,12 @@
 package Modul2Challenge;
 
-public class Plant {
+public class Item {
     String name;
     String type;
 
-    Plant(String name, String type ) {
+    Item(String name, String type) {
         this.name = name;
         this.type = type;
     }
 }
+
