@@ -37,7 +37,6 @@ public class Tugas_1 {
         Scanner input = new Scanner(System.in);
         String menuPilihan;
 
-        // Menampilkan menu login
         System.out.println("Pilih login: ");
         System.out.println("1. Admin ");
         System.out.println("2. Mahasiswa ");
@@ -45,9 +44,8 @@ public class Tugas_1 {
 
         menuPilihan = input.nextLine();
 
-        // proses login Admin
         if (menuPilihan.equals("1")) {
-            Admin admin = new Admin(); // Buat objek Admin
+            Admin admin = new Admin(); 
             
             System.out.print("Masukkan username: ");
             String username = input.nextLine();
@@ -55,11 +53,10 @@ public class Tugas_1 {
             System.out.print("Masukkan password: ");
             String password = input.nextLine();
 
-            // Panggil method login yang sekarang bertipe void
             admin.login(username, password);
             
         } else if (menuPilihan.equals("2")) {
-            Mahasiswa mahasiswa = new Mahasiswa(); // Buat objek Mahasiswa
+            Mahasiswa mahasiswa = new Mahasiswa(); 
 
             System.out.print("Masukkan Nama: ");
             String nama = input.nextLine();
@@ -67,7 +64,6 @@ public class Tugas_1 {
             System.out.print("Masukkan NIM: ");
             String nim = input.nextLine();
 
-            // Panggil method login yang sekarang bertipe void
             mahasiswa.login(nama, nim);
 
         } else {
