@@ -1,7 +1,7 @@
 package Tugas;
 import java.util.Scanner;
 
-public class Tugas_1 { //Di awal main(), saya membuat menu untuk memilih login sebagai Admin atau Mahasiswa.
+public class Main { //Di awal main(), saya membuat menu untuk memilih login sebagai Admin atau Mahasiswa.
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String menuPilihan;
