@@ -1,4 +1,3 @@
-package Modul 3.Tugas_Modul3;
 
 class User {
     private String nama;

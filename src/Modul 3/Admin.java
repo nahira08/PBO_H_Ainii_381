@@ -1,26 +1,29 @@
-package Modul 3;
-
-class Admin extends User {
+public class Admin extends User {
     private String username;
     private String password;
 
     public Admin(String nama, String nim, String username, String password) {
         super(nama, nim);
-        this.usermame = username;
+        this.username = username;
         this.password = password;
     }
 
     @Override
     public void login() {
-        if (username.equals("admin") && password.equals("admin381")) {
-            System.out.println("Login Admin berhasil.");
+        if (username.equals("Admin381") && password.equals("Password381")) {
+            System.out.println("Login Admin sukses!\n");
         } else {
-            System.out.println("Login Admin gagal.");
+            System.out.println("Username atau password salah!\n");
         }
     }
 
     @Override
     public void displayInfo() {
-        System.out.println("Selamat datang Admin " + getNama());
+        System.out.println("==================================");
+        System.out.println("         HALAMAN ADMIN");
+        System.out.println("==================================");
+        System.out.printf("Nama Admin : %s\n", getNama());
+        System.out.printf("NIM        : %s\n", getNim());
+        System.out.println("==================================\n");
     }
 }

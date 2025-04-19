@@ -1,30 +1,30 @@
-package Modul 3;
+import java.util.Scanner;
 
-class LoginSystem {
+public class LoginSystem {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Pilihan login sebagai:");
+        System.out.println("=========== LOGIN SYSTEM ===========");
         System.out.println("1. Admin");
         System.out.println("2. Mahasiswa");
-        System.out.print("Masukkan pilihan (1/2): ");
+        System.out.print("Pilih login sebagai (1/2): ");
         int pilihan = input.nextInt();
-        input.nextLine();
+        input.nextLine(); // buang newline
 
         if (pilihan == 1) {
-            System.out.print("Masukkan username: ");
+            System.out.print("\nMasukkan username: ");
             String username = input.nextLine();
             System.out.print("Masukkan password: ");
             String password = input.nextLine();
 
-            Admin admin = new Admin("Admin user", "381", username, password);
+            Admin admin = new Admin("Nur Aini Admin", "202410370110381", username, password);
             admin.login();
             admin.displayInfo();
 
         } else if (pilihan == 2) {
-            System.out.print("Masukkan nama: ");
+            System.out.print("\nMasukkan Nama: ");
             String nama = input.nextLine();
-            System.out.println("Masukkan NIM: ");
+            System.out.print("Masukkan NIM  : ");
             String nim = input.nextLine();
 
             Mahasiswa mhs = new Mahasiswa(nama, nim);
