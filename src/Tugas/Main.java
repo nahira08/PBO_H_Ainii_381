@@ -1,47 +1,46 @@
 package Tugas;
+
 import java.util.Scanner;
 
-public class Main { //Di awal main(), saya membuat menu untuk memilih login sebagai Admin atau Mahasiswa.
+public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        String menuPilihan;
 
-        // Menampilkan menu login
-        System.out.println("Pilih login: ");
-        System.out.println("1. Admin ");
-        System.out.println("2. Mahasiswa ");
-        System.out.print("Masukkan Pilihan: ");
+        System.out.println("=========== LOGIN SYSTEM ===========");
+        System.out.println("1. Admin");
+        System.out.println("2. Mahasiswa");
+        System.out.print("Pilih login: ");
+        String menuPilihan = input.nextLine();
 
-        menuPilihan = input.nextLine();
-
-        // Jika user pilih 1, maka dibuat object Admin, lalu input username dan password, lalu dipanggil method login() milik class Admin
+        // Pilihan login sebagai Admin
         if (menuPilihan.equals("1")) {
-            Admin admin = new Admin(); // Buat objek Admin
-            
             System.out.print("Masukkan username: ");
             String username = input.nextLine();
 
             System.out.print("Masukkan password: ");
             String password = input.nextLine();
 
-            // Panggil method login yang sekarang bertipe void
-            admin.login(username, password);
-            
-        //Jika pilihannya 2, maka buat object Mahasiswa, input nama dan nim, lalu panggil login() milik class Mahasiswa
-        } else if (menuPilihan.equals("2")) { 
-            Mahasiswa mahasiswa = new Mahasiswa(); 
+            // Admin menggunakan constructor dengan super() ke User
+            Admin admin = new Admin("Nur Aini Admin", "202410370110381", username, password);
+            admin.login();         // Override dari User
+            admin.displayInfo();   // Override dari User
 
+        // Pilihan login sebagai Mahasiswa
+        } else if (menuPilihan.equals("2")) {
             System.out.print("Masukkan Nama: ");
             String nama = input.nextLine();
 
-            System.out.print("Masukkan NIM: ");
+            System.out.print("Masukkan NIM : ");
             String nim = input.nextLine();
 
-            mahasiswa.login(nama, nim);
+            // Mahasiswa juga menggunakan inheritance dari User
+            Mahasiswa mahasiswa = new Mahasiswa(nama, nim);
+            mahasiswa.login();         // Override dari User
+            mahasiswa.displayInfo();   // Override dari User
 
-            // Terakhir, kalau input tidak valid, muncul pesan error 
+        // Pilihan tidak valid
         } else {
-            System.out.println("Pilihan Tidak Valid");
+            System.out.println("Pilihan tidak valid.");
         }
 
         input.close();

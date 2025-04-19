@@ -1,12 +1,13 @@
+package Tugas;
 
-class User {
+public class User {
     private String nama;
     private String nim;
 
-    public User(String nama,String nim) {
-        this.nama = nama; 
+    public User(String nama, String nim) {
+        this.nama = nama;
         this.nim = nim;
-    } 
+    }
 
     public String getNama() {
         return nama;

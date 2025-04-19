@@ -1,14 +1,31 @@
 package Tugas;
-public class Admin { // Di sini saya membuat class Admin yang menyimpan username dan password tetap menggunakan final.
-    final String username = "Admin381";
-    final String password = "Password381";
 
-    // Method login() akan mencocokkan input pengguna, dan memberikan respons login berhasil atau gagal.
-    void login(String getUsername, String getPassword) { 
-        if (getUsername.equals(username) && getPassword.equals(password)) {
-            System.out.println("Login Admin berhasil!");
+public class Admin extends User {
+    private String username;
+    private String password;
+
+    public Admin(String nama, String nim, String username, String password) {
+        super(nama, nim);
+        this.username = username;
+        this.password = password;
+    }
+
+    @Override
+    public void login() {
+        if (username.equals("Admin381") && password.equals("Password381")) {
+            System.out.println("Login Admin berhasil!\n");
         } else {
-            System.out.println("Login gagal! Username atau password salah.");
+            System.out.println("Login gagal! Username atau password salah!\n");
         }
+    }
+
+    @Override
+    public void displayInfo() {
+        System.out.println("==================================");
+        System.out.println("         HALAMAN ADMIN");
+        System.out.println("==================================");
+        System.out.printf("Nama Admin : %s\n", getNama());
+        System.out.printf("NIM        : %s\n", getNim());
+        System.out.println("==================================\n");
     }
 }
