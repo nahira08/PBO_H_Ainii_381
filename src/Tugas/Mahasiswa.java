@@ -1,19 +1,27 @@
-package Tugas;
-class Mahasiswa { 
-    final String Nama = "Nur Aini";
-    final String Nim = "202410370110381";
-
-    void displayInfo() { 
-        System.out.println("\nNama: " + Nama);
-        System.out.println("Password: " + Nim);
+public class Mahasiswa extends User {
+ 
+    public Mahasiswa(String nama, String nim) {
+        super(nama, nim);
     }
 
-    void login(String getUsername, String getPassword) { 
-        if (getUsername.equals(Nama) && getPassword.equals(Nim)) {
-            displayInfo();
-            System.out.println("Login Mahasiswa berhasil!");
+    @Override
+    public void login() {
+        if (getNama().equals("Nur Aini") && getNim().equals("381")) {
+            System.out.println("Login Mahasiswa sukses!\n");
         } else {
-            System.out.println("Login gagal! Nama atau NIM salah.");
+            System.out.println("Nama atau NIM salah!\n");
+        }
+    }
+
+    @Override
+    public void displayInfo() {
+        if (getNama().equals("Nur Aini") && getNim().equals("381")) {
+            System.out.println("==================================");
+            System.out.println("        HALAMAN MAHASISWA");
+            System.out.println("==================================");
+            System.out.printf("Nama       : %s\n", getNama());
+            System.out.printf("NIM        : %s\n", getNim());
+            System.out.println("==================================\n");
         }
     }
 }
