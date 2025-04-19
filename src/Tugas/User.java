@@ -1,10 +1,10 @@
 package Tugas;
 
-public class User {
+public class User { // inii superclass buat Admin sama Mahasiswa
     private String nama;
     private String nim;
 
-    public User(String nama, String nim) {
+    public User(String nama, String nim) { // construktornyaa
         this.nama = nama;
         this.nim = nim;
     }
@@ -25,7 +25,7 @@ public class User {
         this.nim = nim;
     }
 
-    public void login() {
+    public void login() { // method ini buat dioverride ke subclass
         System.out.println("Login User");
     }
 

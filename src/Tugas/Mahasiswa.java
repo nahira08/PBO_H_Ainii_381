@@ -1,9 +1,9 @@
 package Tugas;
 
-public class Mahasiswa extends User {
+public class Mahasiswa extends User { // subclass 
 
-    public Mahasiswa(String nama, String nim) {
-        super(nama, nim);
+    public Mahasiswa(String nama, String nim) { // construktor
+        super(nama, nim); // buat manggil const dri class si user superclass
     }
 
     @Override
