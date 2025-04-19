@@ -1,5 +1,7 @@
+package Tugas;
+
 public class Mahasiswa extends User {
- 
+
     public Mahasiswa(String nama, String nim) {
         super(nama, nim);
     }
@@ -17,10 +19,10 @@ public class Mahasiswa extends User {
     public void displayInfo() {
         if (getNama().equals("Nur Aini") && getNim().equals("381")) {
             System.out.println("==================================");
-            System.out.println("        HALAMAN MAHASISWA");
+            System.out.println("         HALAMAN MAHASISWA");
             System.out.println("==================================");
-            System.out.printf("Nama       : %s\n", getNama());
-            System.out.printf("NIM        : %s\n", getNim());
+            System.out.printf("Nama Mahasiswa : %s\n", getNama());
+            System.out.printf("NIM            : %s\n", getNim());
             System.out.println("==================================\n");
         }
     }
