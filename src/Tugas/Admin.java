@@ -1,21 +1,23 @@
 package Tugas;
 
-public class Admin extends User {
+public class Admin extends User { //subclass 
     private String username;
     private String password;
 
-    public Admin(String nama, String nim, String username, String password) {
+    public Admin(String nama, String nim, String username, String password) { // construktr
         super(nama, nim);
         this.username = username;
         this.password = password;
     }
 
     @Override
-    public void login() {
+    public boolean login() {
         if (username.equals("Admin381") && password.equals("Password381")) {
             System.out.println("Login Admin berhasil!\n");
+            return true;
         } else {
             System.out.println("Login gagal! Username atau password salah!\n");
+            return false;
         }
     }
 
