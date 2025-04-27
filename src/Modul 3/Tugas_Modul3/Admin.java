@@ -1,10 +1,8 @@
-package Tugas;
-
-public class Admin extends User { //subclass 
+public class Admin extends User {
     private String username;
     private String password;
 
-    public Admin(String nama, String nim, String username, String password) { // construktr
+    public Admin(String nama, String nim, String username, String password) {
         super(nama, nim);
         this.username = username;
         this.password = password;
