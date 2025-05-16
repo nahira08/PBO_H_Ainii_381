@@ -1,4 +1,4 @@
-package com.praktikum.main;
+package com.praktikum.main; // buat struktur folder buat ngelompok in class supaya rapih
 
 import com.praktikum.users.*;
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class LoginSystem {
         System.out.print("Pilih login: ");
         String menuPilihan = input.nextLine();
 
-        User user = null; //  Gunakan superclass (polymorphism)
+        User user = null; //  Gunakan superclass (polymorphism) Method jalan sesuai jenis object-nya
 
         if (menuPilihan.equals("1")) {
             System.out.print("Masukkan username: ");
@@ -46,3 +46,4 @@ public class LoginSystem {
         }
     }
 }
+//Overloading = Method sama, beda parameter ( nambahin report time)

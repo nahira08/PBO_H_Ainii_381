@@ -1,6 +1,6 @@
 package com.praktikum.actions;
 
-public interface MahasiswaActions {
+public interface MahasiswaActions { //Kontrak method
     void reportItem();
     void viewReportedItems();
 }

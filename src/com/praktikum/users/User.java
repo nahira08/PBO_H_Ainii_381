@@ -1,8 +1,8 @@
 package com.praktikum.users;
 
 public abstract class User { // inii superclass buat Admin sama Mahasiswa
-    private String nama;
-    private String nim;
+    private String nama; // Nunjukin bagian penting aja, detailnya disembunyiin. 
+    private String nim; // Kerangka class, isi di subclass
 
     public User(String nama, String nim) { // construktornyaa
         this.nama = nama;
