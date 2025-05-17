@@ -11,9 +11,9 @@ public class ManajemenStok {
         Scanner scanner = new Scanner(System.in); // Untuk input user
         boolean lanjutbang = true; // Flag loop menu
 
-        // ARRAYLISTS (data awal)
+        // ARRAYLISTS (data awal) | Array > jumlah data tetap
         daftarBarang.add(new Barang("Matcha", 10));
-        daftarBarang.add(new Barang("Dark choco", 5)); // Array > jumlah data tetap
+        daftarBarang.add(new Barang("Dark choco", 5)); 
         daftarBarang.add(new Barang("Avocado", 15));
 
         while (lanjutbang) {
