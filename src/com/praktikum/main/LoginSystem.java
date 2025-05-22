@@ -1,49 +1,57 @@
-package com.praktikum.main; // buat struktur folder buat ngelompok in class supaya rapih
+package com.praktikum.main;
 
+import com.praktikum.data.Item;
 import com.praktikum.users.*;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LoginSystem {
+    public static ArrayList<User> userList = new ArrayList<>();
+    public static ArrayList<Item> reportedItems = new ArrayList<>(); // typo: ganti reportedItem jadi reportedItems
+
+    // Tambah user default (Admin & Mahasiswa)
+    public static void initDefaultUsers() {
+        userList.add(new Admin("Nur Aini Admin", "202410370110381", "Admin381", "Password381"));
+        userList.add(new Mahasiswa("Nur Aini", "381"));
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        initDefaultUsers(); // inisialisasi userList
 
         System.out.println("=========== LOGIN SYSTEM ===========");
-        System.out.println("1. Admin");
-        System.out.println("2. Mahasiswa");
-        System.out.print("Pilih login: ");
-        String menuPilihan = input.nextLine();
+        System.out.print("Masukkan username/Nama: ");
+        String uname = input.nextLine();
 
-        User user = null; //  Gunakan superclass (polymorphism) Method jalan sesuai jenis object-nya
+        System.out.print("Masukkan password/NIM: ");
+        String pw = input.nextLine();
 
-        if (menuPilihan.equals("1")) {
-            System.out.print("Masukkan username: ");
-            String username = input.nextLine();
+        User user = null;
 
-            System.out.print("Masukkan password: ");
-            String password = input.nextLine();
+        // Login loop (versi aman Java 8 ke atas)
+        for (User u : userList) {
+            if (u instanceof Admin) {
+                Admin a = (Admin) u;
+                if (a.getUsername().equals(uname) && a.getPassword().equals(pw)) {
+                    user = a;
+                    break;
+                }
+            } else if (u instanceof Mahasiswa) {
+                Mahasiswa m = (Mahasiswa) u;
+                if (m.getNama().equals(uname) && m.getNim().equals(pw)) {
+                    user = m;
+                    break;
+                }
+            }
+        }
 
-            user = new Admin("Nur Aini Admin", "202410370110381", username, password);
-
-        } else if (menuPilihan.equals("2")) {
-            System.out.print("Masukkan Nama: ");
-            String nama = input.nextLine();
-
-            System.out.print("Masukkan NIM : ");
-            String nim = input.nextLine();
-
-            user = new Mahasiswa(nama, nim);
-
+        if (user != null && user.login()) {
+            user.displayInfo();
+            user.displayAppMenu();
         } else {
-            System.out.println("Pilihan tidak valid.");
-            input.close();
-            return;
-            
-        } if (user.login()) {
-              user.displayInfo();
-              user.displayAppMenu();
+            System.out.println("Login gagal. Username atau password/NIM salah.");
+        }
 
         input.close();
-        }
     }
 }
-//Overloading = Method sama, beda parameter ( nambahin report time)

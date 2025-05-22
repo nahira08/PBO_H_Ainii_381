@@ -1,4 +1,4 @@
-package Modul5;
+package Modul5.Codelab;
 
 // Custom exception yang akan digunakan jika stok barang tidak mencukupi
 public class StokTidakCukupException extends Exception {

@@ -1,4 +1,4 @@
-package Modul5;
+package Modul5.Codelab;
 
 // Class Barang digunakan untuk menyimpan data tiap barang di program
 public class Barang {

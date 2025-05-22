@@ -1,4 +1,4 @@
-package Modul5;
+package Modul5.Codelab;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
