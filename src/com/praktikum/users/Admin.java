@@ -64,19 +64,19 @@ public class Admin extends User implements AdminActions {
                     break;
 
                 case "2":
-                    try {
+                    try { // Exceptions = buat menangani input dataa
                         System.out.println("=== Daftar Barang yang Bisa Ditandai ===");
-                        for (int i = 0; i < LoginSystem.reportedItems.size(); i++) {
-                            Item item = LoginSystem.reportedItems.get(i);
+                        for (int i = 0; i < LoginSystem.reportedItems.size(); i++) { // Iteratorr
+                            Item item = LoginSystem.reportedItems.get(i); // ArrayListt
                             if (item.getStatus().equals("Reported")) {
                                 System.out.printf("[%d] %s - %s (%s)\n", i, item.getItemName(), item.getLocation(), item.getStatus());
                             }
                         }
 
                         System.out.print("Masukkan indeks barang yang ingin ditandai 'Claimed': ");
-                        int index = Integer.parseInt(scanner.nextLine());
+                        int index = Integer.parseInt(scanner.nextLine()); // Exceptions yaw
 
-                        Item selected = LoginSystem.reportedItems.get(index);
+                        Item selected = LoginSystem.reportedItems.get(index); // Exceptions 2
                         if (selected.getStatus().equals("Reported")) {
                             selected.setStatus("Claimed");
                             System.out.println("Barang berhasil ditandai sebagai 'Claimed'.");
@@ -116,7 +116,7 @@ public class Admin extends User implements AdminActions {
                     String nama = scanner.nextLine();
                     System.out.print("NIM Mahasiswa: ");
                     String nim = scanner.nextLine();
-                    LoginSystem.userList.add(new Mahasiswa(nama, nim));
+                    LoginSystem.userList.add(new Mahasiswa(nama, nim)); // Arraylistt
                     System.out.println("Mahasiswa berhasil ditambahkan.");
                     break;
 
@@ -125,12 +125,12 @@ public class Admin extends User implements AdminActions {
                     String targetNIM = scanner.nextLine();
                     boolean ditemukan = false;
 
-                    for (int i = 0; i < LoginSystem.userList.size(); i++) {
-                        User u = LoginSystem.userList.get(i);
+                    for (int i = 0; i < LoginSystem.userList.size(); i++) { // Iterator yaw
+                        User u = LoginSystem.userList.get(i); // ArrayListt
                         if (u instanceof Mahasiswa) {
                             Mahasiswa m = (Mahasiswa) u;
                             if (m.getNim().equals(targetNIM)) {
-                                LoginSystem.userList.remove(i);
+                                LoginSystem.userList.remove(i); // ArrayListt
                                 System.out.println("Mahasiswa berhasil dihapus.");
                                 ditemukan = true;
                                 break;
@@ -172,6 +172,7 @@ public class Admin extends User implements AdminActions {
                     break;
                 case "0":
                     System.out.println("Logout...");
+                    LoginSystem.main(null);
                     return;
                 default:
                     System.out.println("Pilihan tidak valid.");

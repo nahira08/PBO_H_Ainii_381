@@ -1,11 +1,14 @@
 package com.praktikum.data;
 
 public class Item {
+    // ini properti data itemnyaa
     private String itemName;
     private String description;
     private String location;
     private String status;
 
+    // constructorr = method khusus yang dipakai 
+    // untuk mengisi nilai awal saat objekk dibuatt
     public Item(String itemName, String description, String location) {
         this.itemName = itemName;
         this.description = description;
@@ -47,6 +50,7 @@ public class Item {
         this.status = status;
     }
 
+    // Rpresentasi sebagai teks (digunakan saat loop di Iteratornyaa)
     @Override
     public String toString() {
         return "Nama: " + itemName +

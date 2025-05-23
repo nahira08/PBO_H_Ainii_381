@@ -17,6 +17,7 @@ public abstract class User { // inii superclass buat Admin sama Mahasiswa
         return nim;
     }
 
+    // Abstract method wajib diisi oleh child-class (Admin & Mahasiswa)
     public abstract boolean login();
     public abstract void displayAppMenu();
     public abstract void displayInfo();

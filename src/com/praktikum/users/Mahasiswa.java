@@ -1,9 +1,8 @@
 package com.praktikum.users;
 
 import com.praktikum.actions.MahasiswaActions;
-import com.praktikum.main.LoginSystem;
 import com.praktikum.data.Item;
-
+import com.praktikum.main.LoginSystem;
 import java.util.Scanner;
 
 public class Mahasiswa extends User implements MahasiswaActions {
@@ -33,7 +32,7 @@ public class Mahasiswa extends User implements MahasiswaActions {
     @Override
     public void reportItem() {
         Scanner scanner = new Scanner(System.in);
-        try {
+        try { // Exceptions = Menangani error input & akses data saat runtimee
             System.out.print("Masukkan Nama Barang: ");
             String namaBarang = scanner.nextLine();
 
@@ -43,6 +42,7 @@ public class Mahasiswa extends User implements MahasiswaActions {
             System.out.print("Masukkan Lokasi Terakhir/Ditemukan: ");
             String lokasi = scanner.nextLine();
 
+            // ArrayLists = bisa tambah/hapus data biar fleksibel
             Item item = new Item(namaBarang, deskripsi, lokasi);
             LoginSystem.reportedItems.add(item);
 
@@ -59,6 +59,8 @@ public class Mahasiswa extends User implements MahasiswaActions {
         } else {
             System.out.println("=== Daftar Barang yang Dilaporkan ===");
             int count = 0;
+
+            // Iterator = Menelusuri data dalam koleksi (pakai for-each yaw)
             for (Item item : LoginSystem.reportedItems) {
                 if (item.getStatus().equals("Reported")) {
                     count++;
@@ -92,6 +94,7 @@ public class Mahasiswa extends User implements MahasiswaActions {
                     break;
                 case "0":
                     System.out.println("Logout...");
+                    LoginSystem.main(null);
                     return;
                 default:
                     System.out.println("Pilihan tidak valid.");

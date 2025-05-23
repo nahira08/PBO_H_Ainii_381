@@ -6,18 +6,21 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class LoginSystem {
+
+    // ArrayList = menyimpan semua user dan laporan barangnyaa
     public static ArrayList<User> userList = new ArrayList<>();
-    public static ArrayList<Item> reportedItems = new ArrayList<>(); // typo: ganti reportedItem jadi reportedItems
+    public static ArrayList<Item> reportedItems = new ArrayList<>(); 
 
     // Tambah user default (Admin & Mahasiswa)
-    public static void initDefaultUsers() {
+    public static void initDefaultUsers() { // ngisi data awal3
         userList.add(new Admin("Nur Aini Admin", "202410370110381", "Admin381", "Password381"));
         userList.add(new Mahasiswa("Nur Aini", "381"));
+
     }
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        initDefaultUsers(); // inisialisasi userList
+        initDefaultUsers(); // inisialisasi userListt
 
         System.out.println("=========== LOGIN SYSTEM ===========");
         System.out.print("Masukkan username/Nama: ");
@@ -28,7 +31,7 @@ public class LoginSystem {
 
         User user = null;
 
-        // Login loop (versi aman Java 8 ke atas)
+        // Iterator = enchanced for-loop untuk menelusuri userlistt
         for (User u : userList) {
             if (u instanceof Admin) {
                 Admin a = (Admin) u;
@@ -45,6 +48,7 @@ public class LoginSystem {
             }
         }
 
+        // Pengecekan login berhasill
         if (user != null && user.login()) {
             user.displayInfo();
             user.displayAppMenu();
