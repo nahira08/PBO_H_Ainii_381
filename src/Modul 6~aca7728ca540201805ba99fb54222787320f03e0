@@ -1,0 +1,5 @@
+src/main/java/codelab/codelab6.java
+
+// File ini dipisahkan dari codelab lain karena menggunakan JavaFX,
+// yang memerlukan struktur dan entry point khusus (extends Application),
+// sehingga tidak bisa digabung dengan implementasi console biasa^^!~
